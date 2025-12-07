@@ -22,13 +22,16 @@ export default function DashboardPage() {
   async function loadPredictions() {
     setLoading(true);
     try {
+      // Use mock data for now
+      const { getMockPredictions, getMockTrendingPredictions } = await import('@/lib/mock-data');
+
       let data: Prediction[];
       if (activeTab === 'trending') {
-        data = await getTrendingPredictions(20);
+        data = getMockTrendingPredictions(20);
       } else if (activeTab === 'all') {
-        data = await getPredictions({ status: 'active', limit: 50 });
+        data = getMockPredictions({ status: 'active', limit: 50 });
       } else {
-        data = await getPredictions({ status: 'active', category: activeTab, limit: 50 });
+        data = getMockPredictions({ status: 'active', category: activeTab, limit: 50 });
       }
       setPredictions(data);
     } catch (error) {

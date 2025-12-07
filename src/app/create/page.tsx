@@ -37,13 +37,17 @@ export default function CreatePredictionPage() {
         .map((tag) => tag.trim())
         .filter(Boolean);
 
-      await createPrediction({
+      // Mock prediction creation for now
+      console.log('Creating prediction:', {
         title: formData.title,
         description: formData.description,
         category: formData.category,
         closes_at: date.toISOString(),
         tags,
       });
+
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       router.push('/dashboard');
     } catch (error) {
