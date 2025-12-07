@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Lightning, TrendingUp, Clock, User, Menu, Search } from 'lucide-react';
+import { Zap, TrendingUp, Clock, User, Menu, Search } from 'lucide-react';
 import { getMockPredictions } from '@/lib/mock-data';
 import { MarketCard } from '@/components/markets/market-card';
 import { CategoryFilter } from '@/components/markets/category-filter';
@@ -35,7 +35,7 @@ export default function MarketsPage() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
-              <Lightning className="w-6 h-6 text-white" fill="white" />
+              <Zap className="w-6 h-6 text-white" fill="white" />
             </div>
             <h1 className="text-xl font-bold font-heading">ORACLE</h1>
           </div>
@@ -60,7 +60,7 @@ export default function MarketsPage() {
         {/* Badge */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
-            <Lightning className="w-4 h-4 text-primary" />
+            <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium">Leveraged Predictions</span>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function MarketsPage() {
 
           <div className="glass rounded-2xl p-4 flex flex-col items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-              <Lightning className="w-5 h-5 text-primary" fill="currentColor" />
+              <Zap className="w-5 h-5 text-primary" fill="currentColor" />
             </div>
             <div className="text-2xl font-bold font-heading">${(totalVolume / 1000).toFixed(0)}K</div>
             <div className="text-xs text-muted-foreground text-center">Total Volume</div>
@@ -125,7 +125,7 @@ export default function MarketsPage() {
       {/* Featured Markets Section */}
       <section className="px-4 py-6">
         <div className="flex items-center gap-2 mb-4">
-          <Lightning className="w-5 h-5 text-primary" />
+          <Zap className="w-5 h-5 text-primary" />
           <h3 className="text-lg font-bold font-heading">Featured Markets</h3>
         </div>
 
