@@ -9,7 +9,7 @@
   --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-mono: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
 
-  /* Deep Navy Background */
+  /* Deep Navy Background - ORACLE Theme */
   --background: 222 47% 11%;
   --foreground: 210 40% 98%;
 
@@ -21,13 +21,13 @@
   --popover: 223 47% 14%;
   --popover-foreground: 210 40% 98%;
 
-  /* Electric Blue Primary */
+  /* Electric Blue Primary - Lightning Bolt Accent */
   --primary: 217 91% 60%;
   --primary-foreground: 210 40% 98%;
 
-  /* Neon Green Accent */
-  --accent: 142 76% 55%;
-  --accent-foreground: 222 47% 11%;
+  /* Magenta/Purple Accent - HOT Badge & Brand */
+  --accent: 326 90% 65%;
+  --accent-foreground: 210 40% 98%;
 
   /* Secondary: Muted blue-gray */
   --secondary: 217 19% 27%;
@@ -37,13 +37,13 @@
   --muted: 217 19% 27%;
   --muted-foreground: 215 20% 65%;
 
-  /* Destructive: Vibrant red */
-  --destructive: 0 84% 60%;
+  /* Destructive: Vibrant red/pink - "No" prediction bars */
+  --destructive: 330 81% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  /* Success: Neon green */
-  --success: 142 76% 55%;
-  --success-foreground: 222 47% 11%;
+  /* Success: Bright green - "Yes" prediction bars */
+  --success: 142 71% 45%;
+  --success-foreground: 210 40% 98%;
 
   /* Warning: Amber */
   --warning: 38 92% 50%;
@@ -77,16 +77,16 @@
   --popover-foreground: 210 40% 98%;
   --primary: 217 91% 60%;
   --primary-foreground: 210 40% 98%;
-  --accent: 142 76% 55%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 326 90% 65%;
+  --accent-foreground: 210 40% 98%;
   --secondary: 217 19% 27%;
   --secondary-foreground: 210 40% 98%;
   --muted: 217 19% 27%;
   --muted-foreground: 215 20% 65%;
-  --destructive: 0 84% 60%;
+  --destructive: 330 81% 60%;
   --destructive-foreground: 210 40% 98%;
-  --success: 142 76% 55%;
-  --success-foreground: 222 47% 11%;
+  --success: 142 71% 45%;
+  --success-foreground: 210 40% 98%;
   --warning: 38 92% 50%;
   --warning-foreground: 222 47% 11%;
   --border: 217 19% 27%;
@@ -381,6 +381,14 @@ button:disabled {
   background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(223 47% 12%) 100%);
 }
 
+.gradient-purple {
+  background: linear-gradient(180deg, hsl(280 60% 20%) 0%, hsl(var(--background)) 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, hsl(270 50% 15%) 0%, hsl(var(--background)) 60%);
+}
+
 /* ===================================
    ANIMATIONS
    =================================== */
@@ -422,4 +430,13 @@ button:disabled {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
